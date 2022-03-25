@@ -14,7 +14,7 @@ const router = express.Router();
 // res.sendFile("file.ext", options);
 
 router.route("/api/*")
-.get((req, res, next) => {
+.get((req, res, nxt) => {
     // res.status(404).json({
     //     message: "Invalid entry.",
     // });
@@ -22,22 +22,22 @@ router.route("/api/*")
 });
 
 // router.route("/")
-// .get((req, res, next) => {
+// .get((req, res, nxt) => {
 //     res.sendFile(path.join(path.resolve(), "static", "index.html"));
 // });
 //
 // router.route("/new-account")
-// .get((req, res, next) => {
+// .get((req, res, nxt) => {
 //     res.sendFile(path.join(path.resolve(), "static", "new-account.html"));
 // });
 //
 // router.route("/new-transaction")
-// .get((req, res, next) => {
+// .get((req, res, nxt) => {
 //     res.sendFile(path.join(path.resolve(), "static", "new-transaction.html"));
 // });
 
 router.route("*")
-.get((req, res, next) => {
+.get((req, res, nxt) => {
     // res.status(404).sendFile(path.join(path.resolve(), "static", "not-found.html"));
     res.sendStatus(404);
 });
