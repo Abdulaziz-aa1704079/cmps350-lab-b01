@@ -5,16 +5,20 @@ class Repository {
     }), {
       method: 'GET'
     });
-    const data = await response.json();
-    return data;
+
+    if (response.status === 200) {
+      return await response.json();
+    }
   }
 
   async readAccount(id) {
     const response = await fetch(this.#urlPathQuery(`/api/accounts/${id}`, {}), {
       method: "GET",
     });
-    const data = response.json();
-    return data;
+
+    if (response.status === 200) {
+      return await response.json();
+    }
   }
 
   async createAccount(body) {
@@ -25,8 +29,12 @@ class Repository {
       },
       body: JSON.stringify(body),
     });
-    const data = response.json();
-    return data;
+
+    if (response.status === 201) {
+      return await response.json();
+    } else if (response.status === 409) {
+      return await response.text();
+    }
   }
 
   async updateAccount(id, body) {
@@ -37,15 +45,20 @@ class Repository {
       },
       body: JSON.stringify(body),
     });
-    const data = response.json();
-    return data;
+
+    if (response.status === 201) {
+      return await response.json();
+    }
   }
 
   async deleteAccount(id) {
     const response = await fetch(this.#urlPathQuery(`/api/accounts/${id}`, {}), {
       method: "DELETE",
     });
-    return response;
+
+    if (response.status === 204) {
+      return await response.text();
+    }
   }
 
   async createTransaction(id, body) {
@@ -56,8 +69,12 @@ class Repository {
       },
       body: JSON.stringify(body),
     });
-    const data = response.json();
-    return data;
+
+    if (response.status === 201) {
+      return await response.json();
+    } else if (response.status === 409) {
+      return await response.text();
+    }
   }
 
   #urlPathQuery(path, query) {

@@ -86,7 +86,7 @@ describe("GET /api/banks", () => {
 
 const deleteId = 1101;
 describe("DELETE /api/accounts/:id", () => {
-  it("it deletes the account with the provided id", (done) => {
+  it(`it deletes the account with the provided id (${deleteId})`, (done) => {
     chai.request(server)
       .delete(`/api/accounts/${deleteId}`)
       .end((err, res) => {
