@@ -1,0 +1,44 @@
+[{
+  "plate": "559817",
+  "owner": "John Doe",
+  "violations": [{
+      "category": "speeding",
+      "date": "2019-01-12T12:05:18.258Z",
+      "paid": true
+    },
+    {
+      "category": "parking",
+      "date": "2020-04-23T02:25:43.511Z",
+      "paid": false
+    },
+    {
+      "category": "parking",
+      "date": "2021-12-07T01:21:57.001Z",
+      "paid": false
+    }
+  ]
+}, {
+  "plate": "12099",
+  "owner": "Jane Doe",
+  "violations": [{
+      "category": "speeding",
+      "date": "2021-11-30T14:15:54.684Z",
+      "paid": true
+    },
+    {
+      "category": "undertaking",
+      "date": "2021-12-24T16:56:09.793Z",
+      "paid": false
+    },
+    {
+      "category": "speeding",
+      "date": "2022-02-02T21:34:34.122Z",
+      "paid": false
+    },
+    {
+      "category": "parking",
+      "date": "2022-03-14T07:11:45.661Z",
+      "paid": false
+    }
+  ]
+}]

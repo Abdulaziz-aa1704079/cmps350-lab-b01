@@ -1,0 +1,1 @@
+Save your screenshots in this directory.
